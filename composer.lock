@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "626b9e7ddd47fb7eff9aaa53cce0c9ad",
+    "content-hash": "1c75cb9cbdeba499a0830889ab43bcd7",
     "packages": [
         {
             "name": "brick/math",
@@ -509,6 +509,257 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v7.17.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "2d302233f2bb0926812d82823bb820d405e130fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/2d302233f2bb0926812d82823bb820d405e130fc",
+                "reference": "2d302233f2bb0926812d82823bb820d405e130fc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": ">=1.3.7",
+                "ezimuel/ringphp": "^1.1.2",
+                "php": "^7.3 || ^8.0",
+                "psr/log": "^1|^2|^3"
+            },
+            "require-dev": {
+                "ext-yaml": "*",
+                "ext-zip": "*",
+                "mockery/mockery": "^1.2",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^9.3",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/finder": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/autoload.php"
+                ],
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "LGPL-2.1-only"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                },
+                {
+                    "name": "Enrico Zimuel"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "support": {
+                "issues": "https://github.com/elastic/elasticsearch-php/issues",
+                "source": "https://github.com/elastic/elasticsearch-php/tree/v7.17.2"
+            },
+            "time": "2023-04-21T15:31:12+00:00"
+        },
+        {
+            "name": "ezimuel/guzzlestreams",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezimuel/guzzlestreams.git",
+                "reference": "b4b5a025dfee70d6cd34c780e07330eb93d5b997"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezimuel/guzzlestreams/zipball/b4b5a025dfee70d6cd34c780e07330eb93d5b997",
+                "reference": "b4b5a025dfee70d6cd34c780e07330eb93d5b997",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Fork of guzzle/streams (abandoned) to be used with elasticsearch-php",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "support": {
+                "source": "https://github.com/ezimuel/guzzlestreams/tree/3.1.0"
+            },
+            "time": "2022-10-24T12:58:50+00:00"
+        },
+        {
+            "name": "ezimuel/ringphp",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezimuel/ringphp.git",
+                "reference": "7887fc8488013065f72f977dcb281994f5fde9f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezimuel/ringphp/zipball/7887fc8488013065f72f977dcb281994f5fde9f4",
+                "reference": "7887fc8488013065f72f977dcb281994f5fde9f4",
+                "shasum": ""
+            },
+            "require": {
+                "ezimuel/guzzlestreams": "^3.0.1",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "replace": {
+                "guzzlehttp/ringphp": "self.version"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~9.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Fork of guzzle/RingPHP (abandoned) to be used with elasticsearch-php",
+            "support": {
+                "source": "https://github.com/ezimuel/ringphp/tree/1.2.2"
+            },
+            "time": "2022-12-07T11:28:53+00:00"
+        },
+        {
+            "name": "flugger/laravel-responder",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flugg/laravel-responder.git",
+                "reference": "726f71ff5ef87b9f4be461389d0e560b473811bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flugg/laravel-responder/zipball/726f71ff5ef87b9f4be461389d0e560b473811bf",
+                "reference": "726f71ff5ef87b9f4be461389d0e560b473811bf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.1|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^5.1|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "league/fractal": "^0.19.0|^0.20",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5|^3.5",
+                "illuminate/database": "^5.1|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "mockery/mockery": "^0.9.5|^1.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^8.5|^9.0|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Responder": "Flugg\\Responder\\Facades\\Responder",
+                        "Transformer": "Flugg\\Responder\\Facades\\Transformer"
+                    },
+                    "providers": [
+                        "Flugg\\Responder\\ResponderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Flugg\\Responder\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Tømmerås",
+                    "email": "flugged@gmail.com"
+                }
+            ],
+            "description": "A Laravel Fractal package for building API responses, giving you the power of Fractal and the elegancy of Laravel.",
+            "homepage": "https://github.com/flugger/laravel-responder",
+            "keywords": [
+                "api",
+                "fractal",
+                "laravel",
+                "lumen",
+                "responder",
+                "response",
+                "transformer"
+            ],
+            "support": {
+                "issues": "https://github.com/flugg/laravel-responder/issues",
+                "source": "https://github.com/flugg/laravel-responder/tree/v3.4.0"
+            },
+            "time": "2024-03-04T18:09:55+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1777,6 +2028,76 @@
             "time": "2024-08-09T21:24:39+00:00"
         },
         {
+            "name": "league/fractal",
+            "version": "0.20.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/fractal.git",
+                "reference": "8b9d39b67624db9195c06f9c1ffd0355151eaf62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/8b9d39b67624db9195c06f9c1ffd0355151eaf62",
+                "reference": "8b9d39b67624db9195c06f9c1ffd0355151eaf62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.5",
+                "illuminate/contracts": "~5.0",
+                "mockery/mockery": "^1.3",
+                "pagerfanta/pagerfanta": "~1.0.0",
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "~3.4",
+                "vimeo/psalm": "^4.22",
+                "zendframework/zend-paginator": "~2.3"
+            },
+            "suggest": {
+                "illuminate/pagination": "The Illuminate Pagination component.",
+                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
+                "zendframework/zend-paginator": "Zend Framework Paginator"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.20.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Fractal\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Sturgeon",
+                    "email": "me@philsturgeon.uk",
+                    "homepage": "http://philsturgeon.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle the output of complex data structures ready for API output.",
+            "homepage": "http://fractal.thephpleague.com/",
+            "keywords": [
+                "api",
+                "json",
+                "league",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/fractal/issues",
+                "source": "https://github.com/thephpleague/fractal/tree/0.20.1"
+            },
+            "time": "2022-04-11T12:47:17+00:00"
+        },
+        {
             "name": "league/mime-type-detection",
             "version": "1.16.0",
             "source": {
@@ -2005,6 +2326,83 @@
                 }
             ],
             "time": "2024-12-08T08:18:47+00:00"
+        },
+        {
+            "name": "mailerlite/laravel-elasticsearch",
+            "version": "11.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mailerlite/laravel-elasticsearch.git",
+                "reference": "eba15222466e9f55a80f7dfdeafa2c99ae53358b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mailerlite/laravel-elasticsearch/zipball/eba15222466e9f55a80f7dfdeafa2c99ae53358b",
+                "reference": "eba15222466e9f55a80f7dfdeafa2c99ae53358b",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "^7.11",
+                "ext-json": "*",
+                "guzzlehttp/psr7": "^1.7|^2.0",
+                "illuminate/contracts": "^7.0|^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.3|^8.0",
+                "psr/http-message": "^1.0|^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.3",
+                "orchestra/testbench": "^6.45|^7.44|^8.25|^9.3",
+                "phpunit/phpunit": "^9.4"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Required to connect to an Elasticsearch host on AWS (^3.80)"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Elasticsearch": "MailerLite\\LaravelElasticsearch\\Facade"
+                    },
+                    "providers": [
+                        "MailerLite\\LaravelElasticsearch\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MailerLite\\LaravelElasticsearch\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MailerLite",
+                    "email": "info@mailerlite.com"
+                }
+            ],
+            "description": "An easy way to use the official PHP ElasticSearch client in your Laravel applications.",
+            "homepage": "https://github.com/mailerlite/laravel-elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "laravel",
+                "search"
+            ],
+            "support": {
+                "issues": "https://github.com/mailerlite/laravel-elasticsearch/issues",
+                "source": "https://github.com/mailerlite/laravel-elasticsearch/tree/11.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mailerlite",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-15T04:54:47+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3298,6 +3696,78 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "1a8460931ea36dc5c76838fec5734d55c88c6831"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/1a8460931ea36dc5c76838fec5734d55c88c6831",
+                "reference": "1a8460931ea36dc5c76838fec5734d55c88c6831",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "support": {
+                "issues": "https://github.com/reactphp/promise/issues",
+                "source": "https://github.com/reactphp/promise/tree/v2.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/reactphp",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-11-16T16:16:50+00:00"
         },
         {
             "name": "symfony/clock",
@@ -8072,12 +8542,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
