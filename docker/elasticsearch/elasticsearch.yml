@@ -1,0 +1,44 @@
+# Elasticsearch configuration file
+
+# Cluster name
+cluster.name: quran-cluster
+
+# Node name (unique within a cluster)
+node.name: node-1
+
+# Path to where the data is stored
+# path.data: /var/lib/elasticsearch
+
+# Path to where logs are stored
+# path.logs: /var/log/elasticsearch
+
+# Network settings
+network.host: 0.0.0.0  # Bind to all interfaces
+http.port: 9209  # HTTP port for communication with the cluster
+transport.tcp.port: 9300  # TCP port for internal cluster communication
+
+# Enable or disable multi-datacenter
+discovery.type: single-node  # Use this if you're running a single node for testing/development
+
+# Java heap size settings
+# Increase the size of the JVM heap if you have more memory
+# (Optional) - Uncomment and set accordingly
+# ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+
+# Disable index creation on startup (optional)
+# action.auto_create_index: false
+
+# Security (optional)
+# Enable security features if necessary (e.g., basic authentication)
+# xpack.security.enabled: true
+# xpack.security.transport.ssl.enabled: true
+# xpack.security.http.ssl.enabled: true
+
+# HTTP SSL settings (optional)
+# xpack.security.http.ssl.key: /path/to/your/private-key.pem
+# xpack.security.http.ssl.certificate: /path/to/your/certificate.pem
+# xpack.security.http.ssl.certificate_authorities: /path/to/your/ca.pem
+
+# Logging
+# Use log levels: TRACE, DEBUG, INFO, WARN, ERROR
+logger.org.elasticsearch: INFO

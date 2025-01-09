@@ -9,4 +9,6 @@ enum AyahFields: string {
     case TEXT_UTHMANI_SIMPLE = 'text_uthmani_simple';
     case TEXT_UTHMANI_TAJWEED = 'text_uthmani_tajweed';
     case TEXT_INDOPAK = 'text_indopak';
+    case TRANSLATION = 'translation';
+    case WORDS = 'words';
 }

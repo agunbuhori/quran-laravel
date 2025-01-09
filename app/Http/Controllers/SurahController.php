@@ -8,6 +8,7 @@ use App\Http\Transformers\SurahAyahsTransformer;
 use App\Http\Transformers\SurahIndexTransformer;
 use App\Models\Ayah;
 use App\Models\Surah;
+use App\Models\Translator;
 
 class SurahController extends Controller
 {
@@ -25,5 +26,10 @@ class SurahController extends Controller
         } 
 
         return responder()->success($query->get(), new SurahAyahsTransformer($request->fields ?? []))->respond();
+    }
+
+    public function translators()
+    {
+        return responder()->success(Translator::cursorPaginate(15))->respond();
     }
 }

@@ -22,4 +22,9 @@ class Ayah extends Model
     {
         return $this->hasMany(AyahTranslation::class);
     }
+
+    public function kalimahs()
+    {
+        return $this->hasMany(Kalimah::class);
+    }
 }

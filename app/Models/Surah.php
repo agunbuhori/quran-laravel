@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasRouteKey;
 use Illuminate\Database\Eloquent\Model;
 
 class Surah extends Model
 {
+    use HasRouteKey;
+    
     protected $guarded = [];
 
 
@@ -30,6 +33,6 @@ class Surah extends Model
      */
     public function translation()
     {
-        return $this->hasOne(SurahTranslation::class)->where('lang', request()->get('lang', 'en'));
+        return $this->hasOne(SurahTranslation::class)->where('lang', app()->getLocale());
     }
 }

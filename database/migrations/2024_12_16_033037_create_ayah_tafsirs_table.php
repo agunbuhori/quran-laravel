@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('ayah_tafsirs', function (Blueprint $table) {
             $table->engine = 'MyISAM';
             $table->increments('id');
-            $table->unsignedTinyInteger('tafsir_id');
+            $table->unsignedTinyInteger('tafsir_book_id');
             $table->unsignedSmallInteger('ayah_id');
             $table->longText('tafsir');
             $table->text('footnotes')->nullable();
             $table->timestamps();
 
-            $table->foreign('tafsir_id')->references('id')->on('tafsir_books')->cascadeOnDelete();
+            $table->foreign('tafsir_book_id')->references('id')->on('tafsir_books')->cascadeOnDelete();
             $table->foreign('ayah_id')->references('id')->on('ayahs')->cascadeOnDelete();
         });
     }

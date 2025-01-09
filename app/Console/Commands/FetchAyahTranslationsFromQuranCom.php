@@ -17,7 +17,7 @@ class FetchAyahTranslationsFromQuranCom extends Command
      *
      * @var string
      */
-    protected $signature = 'quran:ayah-translations {translatorSource} {translatorTarget}';
+    protected $signature = 'quran:fetch-translations {translatorSource} {translatorTarget}';
 
     /**
      * The console command description.
