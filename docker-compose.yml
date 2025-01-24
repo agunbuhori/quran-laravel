@@ -75,6 +75,7 @@ services:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
         volumes:
             - 'sail-redis:/data'
+            - ./docker/redis/redis.conf:/usr/local/etc/redis.conf
         networks:
             - sail
         healthcheck:
