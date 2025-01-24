@@ -86,9 +86,6 @@ services:
             retries: 3
             interval: 10s
             timeout: 5s
-        sysctls:
-            net.core.somaxconn: 511
-            vm.overcommit_memory: 1
         command: redis-server --save 60 1 --loglevel warning --dir /data
         restart: unless-stopped
     elasticsearch:
