@@ -71,6 +71,7 @@ services:
         restart: always
     redis:
         image: 'redis:alpine'
+        container_name: redis_server
         ports:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
         volumes:
@@ -79,14 +80,17 @@ services:
             - sail
         healthcheck:
             test:
-                - CMD
-                - redis-cli
-                - ping
+            - CMD
+            - redis-cli
+            - ping
             retries: 3
+            interval: 10s
             timeout: 5s
         sysctls:
-            - net.core.somaxconn=511
-            - vm.overcommit_memory=1
+            net.core.somaxconn: 511
+            vm.overcommit_memory: 1
+        command: redis-server --save 60 1 --loglevel warning --dir /data
+        restart: unless-stopped
     elasticsearch:
         image: 'docker.elastic.co/elasticsearch/elasticsearch:7.10.2'
         environment:
