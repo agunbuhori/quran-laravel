@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use App\Enums\Lang;
 use Closure;
+use App\Enums\Lang;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
