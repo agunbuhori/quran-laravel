@@ -70,7 +70,7 @@ services:
             timeout: 5s
         restart: always
     redis:
-        image: 'redis:latest'
+        image: 'redis:alpine'
         ports:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
         volumes:
@@ -84,6 +84,7 @@ services:
                 - ping
             retries: 3
             timeout: 5s
+        restart: always
     elasticsearch:
         image: 'docker.elastic.co/elasticsearch/elasticsearch:7.10.2'
         environment:
