@@ -10,7 +10,7 @@ class SurahIndexTransformer extends Transformer
     public function transform(Surah $surah)
     {
         return [
-            'id'               => $surah->getRouteKey(),
+            'id'               => $surah->id,
             'revelation_place' => $surah->revelation_place,
             'revelation_order' => $surah->revelation_order,
             'bismillah_pre'    => $surah->bismillah_pre,

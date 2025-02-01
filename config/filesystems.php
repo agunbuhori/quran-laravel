@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DISK', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'ctb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,6 +54,18 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+            'throw' => false,
+        ],
+
+        'ctb' => [
+            'driver' => 's3',
+            'key' => env('CTB_ACCESS_KEY_ID'),
+            'secret' => env('CTB_SECRET_ACCESS_KEY'),
+            'region' => env('CTB_DEFAULT_REGION'),
+            'bucket' => env('CTB_BUCKET'),
+            'url' => env('CTB_URL'),
+            'endpoint' => env('CTB_ENDPOINT'),
+            'use_path_style_endpoint' => env('CTB_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
 

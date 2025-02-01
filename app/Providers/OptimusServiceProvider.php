@@ -13,7 +13,7 @@ class OptimusServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Optimus::class, function ($app) {
-            return new Optimus(1580030173, 59260789);
+            return new Optimus(1580030174, 59260788);
         });
     }
 
