@@ -3,16 +3,15 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Cache;
 
-class TelegramWebhookRequest extends FormRequest
+class AudienceRegisterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return $this->key === Cache::get("telegram_webhook_key");
+        return true;
     }
 
     /**
@@ -23,8 +22,12 @@ class TelegramWebhookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'update_id'      => ['required', 'numeric'],
-            'message'        => ['required', 'array']
+            'name'     => ['required', 'string', 'max:100'],
+            'email'    => ['required', 'string', 'max:100', 'unique:users,email'],
+            'gender'   => ['required', 'in:male,female'],
+            'birthday' => ['required', 'date'],
+            'password' => ['required', 'size:6'],
+            'phone'    => ['required', 'string', 'max:14', 'min:9']
         ];
     }
 }

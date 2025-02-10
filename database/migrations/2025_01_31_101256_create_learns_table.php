@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('thumbnail')->nullable();
             $table->text('link')->nullable();
             $table->enum('type', ['ebook', 'youtube']);
+            $table->string('tag');
+            $table->string('youtube_id')->nullable();
             $table->foreignId('learn_id')->nullable()->constrained();
             $table->timestamps();
         });

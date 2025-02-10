@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::create([
+            'name' => 'admin',
+            'email' => 'agun@buhori.com',
+            'password' => bcrypt('@Aczx26120roe'),
+            'email_verified_at' => now()
+        ]);
         $this->call([
             SurahSeeder::class,
             TranslatorSeeder::class,
